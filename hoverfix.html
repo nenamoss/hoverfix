@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="Author" content="Nena Moss">
+
+<title>Hover Fix</title>
+
+<style type="text/css">
+
+
+:focus
+{
+  outline: 0;
+}
+a.info
+{
+  position:relative;
+  z-index:21;
+  background-color:#ccc;
+  color:#000;
+  text-decoration:none
+}
+a.info:hover, a.info:focus, a.info:active
+{
+  z-index:22;
+  background-color:#ff0
+}
+a.info span
+{
+  position: absolute;
+  left: -9000px;
+  width: 0;
+  overflow: hidden;
+}
+a.info:hover span, a.info:focus span, a.info:active span
+{
+  display:block;
+  position:absolute;
+  top:1em; left:1em; width:12em;
+  border:1px solid #0cf;
+  background-color:#cff;
+  color:#000;
+  text-align: left;
+  }
+div.example
+{
+ margin-left: 5em;
+}
+</style>
+</head>
+<body>
+<h1>HoverFix</h1>
+<p>
+This is an example of providing information about <a class="info" href="http://www.scienceeducation.gov/user/login"><strong>Adding Tags</strong><span>To add tags, please sign in first or become a member.</span></a> to ScienceEducation.gov.
+</p>
+
+</body>
+</html>
